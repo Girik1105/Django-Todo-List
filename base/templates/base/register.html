@@ -1,0 +1,17 @@
+{% extends "base/base.html" %}
+{% load bootstrap4 %}
+
+{% block content %}
+
+<h1>Register Today!</h1>
+
+<form method="post" class="p-3">
+
+  {% bootstrap_form form %}
+  {% csrf_token %}
+
+  <p>Already have an account? <a href="{% url 'login' %}">Sign in</a> instead</p>
+  <input class="btn btn-primary" type="submit" value="Signup">
+
+</form>
+{% endblock %}
