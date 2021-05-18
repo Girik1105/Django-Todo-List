@@ -22,7 +22,25 @@ python manage.py runserver
 ```
 
 # Features:
+- Add New Tasks
 
+<img src="assets/newtask.jpg" height="400" width="370">
+
+- Update existing tasks
+
+<img src="assets/updatetask.jpg" height="400" width="370">
+
+- view tasks in detail with modals
+
+<img src="assets/modal.jpg" height="400" width="370">
+
+- Search for tasks if to much todo 
+
+<img src="assets/search.jpg" height="400" width="370">
+
+- Delete Tasks you don't want
+
+<img src="assets/delete.jpg" height="400" width="370">
 
 # The Django-Apps
 <table>
