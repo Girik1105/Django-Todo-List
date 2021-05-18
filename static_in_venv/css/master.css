@@ -33,9 +33,52 @@ a:hover{
 }
 
 .past_due_date{
-  color: red;
+  background-color: #FF2F2F;
 }
 
 .due_today{
-  color:green;
+  background-color: #FFF75C;
+}
+
+.completed{
+  background-color: #77FF64;
+}
+
+#circle-red{
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  background: red;
+  border-radius: 50%;
+  margin: 5px;
+  float:left;
+}
+
+#circle-green {
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  background: #77FF64;
+  border-radius: 50%;
+  margin: 5px;
+  float:left;
+  margin-left: 10px;
+}
+
+
+#circle-yellow {
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  background: #FFF75C;
+  border-radius: 50%;
+  margin: 5px;
+  float:left;
+  margin-left: 10px;
+}
+
+.dot_text{
+  float: left;
+  margin: 3px;
+  font-size: 12px;
 }

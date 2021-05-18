@@ -9,7 +9,7 @@ from django.contrib.auth import login
 from django.db.models import Q
 
 from django.urls import reverse_lazy
-from django.utils import timezone
+from django.utils import timezone, dateformat
 
 from django.contrib.auth.views import LoginView, LogoutView
 
@@ -63,8 +63,7 @@ class index(LoginRequiredMixin, ListView):
 
         context['search_input'] = search_input
 
-        context['today'] = timezone.now()
-
+        context['today'] = dateformat.format(timezone.now(), 'Y-m-d')
         return context
 
 

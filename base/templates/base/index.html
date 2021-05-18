@@ -59,7 +59,6 @@
         </div>
       </div>
     </div>
-
     <table class="table">
       <thead>
         <tr>
@@ -68,6 +67,7 @@
           <th scope="col">Erase</th>
         </tr>
       </thead>
+      
       <tbody>
       {% if list %}
       {% for task in list %}
@@ -75,14 +75,27 @@
 
           <td>
             <a class="stretched-link" data-toggle="modal" data-target="#exampleModalCenter{{ task.pk }}">
+
             {% if task.complete %}
-            <strike>{{ task.title }}</strike>
+            
+              <strike><span class="completed">{{ task.title }}</span></strike>
+            
             {% else %}
-              {% if task.due|date:'D M Y' < today|date:'D M Y' %}
-                {{ task.title }}
+            
+              {% if task.due|date:'Y-m-d' == today %}
+            
+                <span class="due_today">{{ task.title }}</span>
+            
+              {% elif task.due|date:'Y-m-d' < today %}
+            
+                <span class="past_due_date">{{ task.title }}</span>
+            
               {% else %}
-                <span class="past_due_date">{{ task.title }} (Due)</span>
+            
+              {{ task.title }}
+            
               {% endif %}
+            
             {% endif %}
           </a>
         </td>
@@ -136,13 +149,46 @@
 
        </tr>
       {% endfor %}
+
+      <tr>
+        <td>
+
+          <div>
+            <div id="circle-red"></div>
+              <p class="dot_text">
+              Past Due Date
+            </p>
+          </div>   
+
+          <div>
+            <div id="circle-green"></div>
+              <p class="dot_text">
+                Completed
+              </p>
+          </div>
+         
+          <div>
+            <div id="circle-yellow"></div>
+              <p class="dot_text">
+                Due Today
+              </p>
+          </div>
+         
+        </td>
+        
+        <td></td>
+        <td></td>
+      </tr>
+
       {% else %}
 
       <tr>
         <td>No items Yet, Start adding Items Today!</td>
       </tr>
+
       {% endif %}
-      </tbody>
+
+      </tbody>     
     </table>
 
 
