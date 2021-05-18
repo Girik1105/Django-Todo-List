@@ -36,11 +36,11 @@ python manage.py runserver
 
 - Search for tasks if to much todo 
 
-<img src="assets/search.jpg" height="400" width="370">
+<img src="assets/search.jpg" height="200" width="370">
 
 - Delete Tasks you don't want
 
-<img src="assets/delete.jpg" height="400" width="370">
+<img src="assets/delete.jpg" height="200" width="370">
 
 # The Django-Apps
 <table>
